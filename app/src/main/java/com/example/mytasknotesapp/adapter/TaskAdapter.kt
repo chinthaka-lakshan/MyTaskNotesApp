@@ -11,10 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mytasknotesapp.R
 import com.example.mytasknotesapp.data.Task
 
-/**
- * RecyclerView Adapter for displaying tasks
- * Handles task item clicks, completion toggle, and deletion
- */
+// TaskAdapter.kt
 class TaskAdapter(
     private var tasks: List<Task>,
     private val onTaskClick: (Task) -> Unit,
@@ -22,9 +19,7 @@ class TaskAdapter(
     private val onTaskDelete: (Task) -> Unit
 ) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
-    /**
-     * ViewHolder for task items
-     */
+    // ViewHolder class
     inner class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val checkboxComplete: CheckBox = itemView.findViewById(R.id.checkboxComplete)
         val tvTaskTitle: TextView = itemView.findViewById(R.id.tvTaskTitle)
@@ -71,9 +66,7 @@ class TaskAdapter(
 
     override fun getItemCount(): Int = tasks.size
 
-    /**
-     * Update task list and refresh UI
-     */
+    // Update tasks list
     fun updateTasks(newTasks: List<Task>) {
         tasks = newTasks
         notifyDataSetChanged()

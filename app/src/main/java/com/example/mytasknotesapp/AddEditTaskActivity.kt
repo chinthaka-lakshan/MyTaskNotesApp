@@ -4,19 +4,13 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.mytasknotesapp.data.Task
 import com.google.android.material.textfield.TextInputEditText
 import androidx.lifecycle.ViewModelProvider
 import com.example.mytasknotesapp.viewmodel.TaskViewModel
 
-/**
- * Activity for adding new task or editing existing task
- * Preserves state during configuration changes
- */
+// MainActivity.kt
 class AddEditTaskActivity : AppCompatActivity() {
 
     private lateinit var taskViewModel: TaskViewModel
@@ -65,10 +59,7 @@ class AddEditTaskActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Save or update task
-     * SECURE CODING: Input validation before saving
-     */
+    // Save task to database
     private fun saveTask() {
         val title = etTaskTitle.text.toString().trim()
         val description = etTaskDescription.text.toString().trim()
@@ -80,7 +71,7 @@ class AddEditTaskActivity : AppCompatActivity() {
             return
         }
 
-        // SECURE CODING: Sanitize input - limit length to prevent excessive data
+        // Input validation
         if (title.length > 100) {
             Toast.makeText(this, "Title too long (max 100 characters)", Toast.LENGTH_SHORT).show()
             return
@@ -113,10 +104,7 @@ class AddEditTaskActivity : AppCompatActivity() {
         finish()
     }
 
-    /**
-     * Handle configuration changes - state is preserved by ViewModel
-     * Input text is preserved automatically by EditText
-     */
+    // Handle screen rotation
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         // EditText automatically saves its state

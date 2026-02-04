@@ -1,4 +1,3 @@
-// In app/src/main/java/com/example/mytasknotesapp/data/Task.kt
 package com.example.mytasknotesapp.data
 
 import androidx.room.Entity

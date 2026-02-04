@@ -1,4 +1,4 @@
-package com.example.mytasknotesapp.viewmodel  // Make sure package is viewmodel
+package com.example.mytasknotesapp.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -9,6 +9,8 @@ import com.example.mytasknotesapp.data.TaskDatabase
 import com.example.mytasknotesapp.data.TaskRepository
 import kotlinx.coroutines.launch
 
+
+// TaskViewModel.kt
 class TaskViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: TaskRepository
@@ -20,6 +22,7 @@ class TaskViewModel(application: Application) : AndroidViewModel(application) {
         allTasks = repository.allTasks
     }
 
+    // Helper functions for database operations
     fun insert(task: Task) = viewModelScope.launch {
         if (task.title.isNotBlank()) {
             repository.insert(task)
