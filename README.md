@@ -23,9 +23,9 @@ This application incorporates several secure coding practices as required by the
 3. No Hard-coded Data: No sensitive information or configuration strings are hard-coded within the source code.
 
 ## Screenshots
-1. **Main Screen**: `[Insert screenshot of the task list here]`
-2. **Add Task**: `[Insert screenshot of the input screen here]`
-3. **Edit/Complete**: `[Insert screenshot of editing a task here]`
+1. **Main Screen**: ![Main Screen](Screenshots/MainScreen.png)
+2. **Add Task**: `![Add Task](Screenshots/AddTask.png)
+3. **Edit/Complete**: ![Edit/Complete](Screenshots/Edit/Complete.png)
 
 ## Technical Specifications
 * Language: Kotlin
