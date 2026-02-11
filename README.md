@@ -25,7 +25,7 @@ This application incorporates several secure coding practices as required by the
 ## Screenshots
 1. **Main Screen**: ![Main Screen](Screenshots/MainScreen.png)
 2. **Add Task**: `![Add Task](Screenshots/AddTask.png)
-3. **Edit/Complete**: ![Edit/Complete](Screenshots/Edit/Complete.png)
+3. **Edit/Complete**: ![Edit/Complete](Screenshots/Edit:Complete.png)
 
 ## Technical Specifications
 * Language: Kotlin
