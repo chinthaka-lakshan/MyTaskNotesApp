@@ -29,6 +29,6 @@ This application incorporates several secure coding practices as required by the
 
 ## Technical Specifications
 * Language: Kotlin
-* Minimum SDK: API 24
+* Minimum SDK: API 26
 * Database: Room (SQLite)
 * IDE: Android Studio
